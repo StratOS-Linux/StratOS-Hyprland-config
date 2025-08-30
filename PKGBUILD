@@ -1,0 +1,42 @@
+# Maintainer: @zstg <zestig@duck.com>
+pkgname=stratos-hyprland-config
+pkgver=1.0
+pkgrel=1
+pkgdesc="Hyprland configuration for StratOS"
+arch=('any')
+license=('GPL3')
+depends=(
+    'hyprland' 'hyprpaper' 'hypridle' 'hyprlock'
+    'waybar' 'stratos-waybar-hyprland-config'
+    'kitty' 'stratos-kitty-config'
+    'eww' 'stratos-eww-config'
+    'stratos-fonts'
+    'mako' 'stratos-mako-config'
+    'swayosd'
+    'polkit-gnome'
+    'wl-clipboard'
+    'stratos-wallpapers'
+)
+
+optdepends=(
+    "bibata-cursor-theme-bin: StratOS' default cursor theme"
+    "stratmacs: StratOS' Emacs build"
+    'stratmacs-config: Stratmacs configuration'
+    'stratos-btop-config: system resource monitor'
+    'swaync: recommended notification daemon'
+    'rofi: alternate app launcher'
+    "zen-browser-bin: StratOS' default browser"
+    'nwg-dock-hyprland-bin: Dock for StratOS-Hyprland'
+)
+
+source=()
+md5sums=('SKIP')
+install=stratos-hyprland-config.install
+
+package() {
+    install -d $pkgdir/etc/skel/.config
+    cp -ra $srcdir/.config/hypr/ $pkgdir/etc/skel/.config/
+
+    install -d $pkgdir/usr/local/bin/
+    cp -ra $srcdir/usr/local/bin/ $pkgdir/usr/local/bin
+}

@@ -1,0 +1,30 @@
+#!/usr/bin/env fish
+
+# Example screenshot command variations:
+# grim -g (slurp) - | satty --filename -  --output-filename ~/Pictures/Screenshots/satty-(date "+%Y%m%d-%H:%M:%S").png
+# grim -g (slurp) - | swappy -f - -o ~/Pictures/Screenshots/satty-(date "+%Y%m%d-%H:%M:%S").png
+
+# screenshotfile=(mktemp --suffix .png --dry-run)
+# echo $screenshotfile
+
+if test "$argv[1]" = "--full-screen"
+    grim
+else if test "$argv[1]" = "--edit"
+    grim -g (slurp) - | swappy -f - # satty -f -o ~/Pictures/Screenshots/satty-(date "+%Y%m%d-%H:%M:%S").png -
+else
+    rm -f /tmp/screen.jpg
+    grim -g (slurp) - | tee /tmp/screen.jpg
+    cat /tmp/screen.jpg | wl-copy
+    # notify-send -i /tmp/screen.jpg "Grim" "Copied to clipboard."
+    set ACTION (notify-send -i /tmp/screen.jpg --action="Edit image" "Screenshot taken" "Click to edit.")
+    echo $ACTION
+
+    switch $ACTION
+        case "editAction"
+            swappy -f /tmp/screen.jpg
+        case 0
+            swappy -f /tmp/screen.jpg
+        case "2"
+            notify-send "Copied to clipboard."
+    end
+end

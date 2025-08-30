@@ -1,0 +1,10 @@
+#!/bin/env sh
+# pidof hypridle || hypridle
+hyprctl dispatch dpms off
+nmcli networking off
+killall eww
+killall waybar
+killall emacs
+powerprofilesctl set power-saver
+systemctl suspend # requires suspend to work - ~/.scripts/disable-usb-wakeup.service 
+hyprlock

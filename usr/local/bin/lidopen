@@ -1,0 +1,11 @@
+#!/bin/env sh
+hyprctl dispatch dpms on
+nmcli networking on
+powerprofilesctl set balanced
+emacs --daemon
+eww daemon
+eww open-many sys1 sys2 uptime powermenu
+waybar
+killall hypridle && hypridle
+pidof hyprlock || hyprlock
+light -S 10 && notify-send "Welcome back!" -i ~/.scripts/svgs/archlinux.svg
