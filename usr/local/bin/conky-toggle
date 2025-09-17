@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+CONKY_PID=$(pgrep -f conky | head -n1)
+if [[ -z $CONKY_PID ]]; then
+    conky &>/dev/null & disown
+elif [[ -n $CONKY_PID ]]; then
+    pkill -SIGUSR1 conky
+fi

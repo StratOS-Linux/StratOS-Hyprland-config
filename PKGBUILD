@@ -16,6 +16,7 @@ depends=(
     'polkit-gnome'
     'wl-clipboard'
     'stratos-wallpapers'
+    'conky'
 )
 
 optdepends=(
