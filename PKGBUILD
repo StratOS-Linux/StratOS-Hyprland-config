@@ -1,7 +1,7 @@
 # Maintainer: @zstg <zestig@duck.com>
 pkgname=stratos-hyprland-config
 pkgver=1.0
-pkgrel=10
+pkgrel=11
 pkgdesc="Hyprland configuration for StratOS"
 arch=('any')
 license=('GPL3')
@@ -36,13 +36,13 @@ source=()
 md5sums=()
 install=stratos-hyprland-config.install
 prepare() {
-    cp -r $startdir/.config $srcdir/
-    cp -r $startdir/usr $srcdir/
+    cp -r "$startdir"/.config "$srcdir"/
+    cp -r "$startdir"/usr "$srcdir"/
 }
 package() {
-    install -d $pkgdir/etc/skel/.config
-    cp -ra $srcdir/.config/hypr/ $pkgdir/etc/skel/.config/
+    install -d "$pkgdir"/etc/skel/.config
+    cp -ra "$srcdir"/.config/hypr/ "$pkgdir"/etc/skel/.config/
 
-    install -d $pkgdir/usr/local/bin/
-    cp -ra $srcdir/usr/local/bin/* $pkgdir/usr/local/bin/
+    install -d "$pkgdir"/usr/local/bin/
+    cp -ra "$srcdir"/usr/local/bin/* "$pkgdir"/usr/local/bin/
 }
