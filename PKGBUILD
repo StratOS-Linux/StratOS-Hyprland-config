@@ -13,7 +13,7 @@ depends=(
     'eww' 'stratos-eww-config'
     'stratos-fonts'
     'mako' 'stratos-mako-config'
-    'swayosd'
+    'swayosd-git'
 	'thunar'
     'polkit-gnome'
     'wl-clipboard'
