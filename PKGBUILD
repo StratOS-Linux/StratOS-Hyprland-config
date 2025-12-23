@@ -1,7 +1,7 @@
 # Maintainer: @zstg <zestig@duck.com>
 pkgname=stratos-hyprland-config
 pkgver=1.0
-pkgrel=15
+pkgrel=16
 pkgdesc="Hyprland configuration for StratOS"
 arch=('any')
 license=('GPL3')
@@ -13,7 +13,7 @@ depends=(
     'eww' 'stratos-eww-config'
     'stratos-fonts'
     'mako' 'stratos-mako-config'
-    'swayosd-git'
+    'swayosd'
 	'thunar'
     'polkit-gnome'
     'wl-clipboard'
