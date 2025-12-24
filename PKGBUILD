@@ -1,7 +1,7 @@
 # Maintainer: @zstg <zestig@duck.com>
 pkgname=stratos-hyprland-config
 pkgver=1.0
-pkgrel=16
+pkgrel=17
 pkgdesc="Hyprland configuration for StratOS"
 arch=('any')
 license=('GPL3')
