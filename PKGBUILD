@@ -1,7 +1,7 @@
 # Maintainer: @zstg <zestig@duck.com>
 pkgname=stratos-hyprland-config
-pkgver=1.0
-pkgrel=18
+pkgver=1.1
+pkgrel=0
 pkgdesc="Hyprland configuration for StratOS"
 arch=('any')
 license=('GPL3')
@@ -13,7 +13,8 @@ depends=(
     'ghostty'
     'eww' 'stratos-eww-config'
     'stratos-fonts'
-    'mako' 'stratos-mako-config'
+    # 'mako' 'stratos-mako-config'
+    'swaync' 'stratos-swaync-config'
     'swayosd'
     'brightnessctl'
     'thunar'
