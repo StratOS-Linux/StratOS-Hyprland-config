@@ -1,20 +1,22 @@
 # Maintainer: @zstg <zestig@duck.com>
 pkgname=stratos-hyprland-config
 pkgver=1.0
-pkgrel=17
+pkgrel=18
 pkgdesc="Hyprland configuration for StratOS"
 arch=('any')
 license=('GPL3')
 depends=(
     'hyprland' 'hyprpaper' 'hypridle' 'hyprlock'
     'waybar' 'stratos-waybar-config'
-	'vicinae-bin'
+    'vicinae-bin'
+    'stratos-bin'
     'ghostty'
     'eww' 'stratos-eww-config'
     'stratos-fonts'
     'mako' 'stratos-mako-config'
     'swayosd'
-	'thunar'
+    'brightnessctl'
+    'thunar'
     'polkit-gnome'
     'wl-clipboard'
     'stratos-wallpapers'

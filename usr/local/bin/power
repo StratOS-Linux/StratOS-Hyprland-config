@@ -1,0 +1,2 @@
+#!/usr/bin/env zsh
+eww -c ~/.dotfiles/eww/dashboard open-many logout sleep poweroff reboot && sleep 3 &&  eww -c ~/.dotfiles/eww/dashboard close logout sleep poweroff reboot 
