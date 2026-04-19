@@ -1,13 +1,13 @@
 # Maintainer: @zstg <zestig@duck.com>
 pkgname=stratos-hyprland-config
 pkgver=1.1
-pkgrel=5
+pkgrel=6
 pkgdesc="Hyprland configuration for StratOS"
 arch=('any')
 license=('GPL3')
 depends=(
     'hyprland' 'hyprpaper' 'hypridle' 'hyprlock'
-    'waybar' 'stratos-waybar-config'
+    'waybar' 'stratos-waybar-hyprland-config'
     'vicinae-bin'
     'stratos-bin'
     'ghostty'
