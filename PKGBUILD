@@ -11,7 +11,7 @@ depends=(
     'vicinae-bin'
     'stratos-bin'
     'ghostty'
-	'kitty'
+	'kitty' 'stratos-kitty-config'
     'eww' 'stratos-eww-config'
     'stratos-fonts'
     # 'mako' 'stratos-mako-config'
